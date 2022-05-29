@@ -28,6 +28,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## Project Use
 
 ````
-Vue axios ES6
+Vue 
+axios 
+ES6 
+Element ui
 ````
 
