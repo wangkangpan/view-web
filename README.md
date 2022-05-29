@@ -29,8 +29,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ````
 Vue 
+	npm install 
 axios 
 ES6 
 Element ui
+abel-plugin-component:只引入需要的组件，以达到减小项目体积的目的
+	cnpm install babel-plugin-component -D
 ````
 
