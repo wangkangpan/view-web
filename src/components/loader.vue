@@ -9,8 +9,13 @@
 </template>
 
 <script>
+    import { ElInput } from 'element-plus'
+
     export default {
-        name : 'loaders',
+        name : 'Loader',
+        components: {
+            ElInput
+        }
     }
 
 </script>
