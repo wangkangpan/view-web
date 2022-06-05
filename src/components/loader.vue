@@ -1,44 +1,59 @@
 <template>
     <div class = "loader">
-            <el-form class = "loader-form" :size="size">
-                <el-space wrap>
-                    <el-form-item>
-                            <el-input id = "account" placeholder="请输入账号"></el-input>
-                    </el-form-item>
-                    <el-form-item>
-                            <el-input id = "password" placeholder="请输入密码"></el-input>
-                    </el-form-item>
-                    <el-form-item>
-                            <el-button>登录</el-button>
-                    </el-form-item>
-                    <el-form-item>
-                            <el-button>注册</el-button>
-                    </el-form-item>
-                    <el-form-item>
-                        <el-link type="warning">忘记密码,去重置</el-link>
-                    </el-form-item>
-                </el-space>
+            <el-form class = "loader-form" size="default">
+                <el-form-item>
+                    <el-input v-model = "account"  maxlength="10" rows = "4"
+                    type = "text" placeholder="请输入账号"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-input v-model = "password" maxlength="10" rows = "4"
+                        type = "password" placeholder="请输入密码" show-password></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-col span="24">
+                        <el-button round = "true">登录</el-button>
+                    </el-col>
+                </el-form-item>
+                <el-form-item>
+                    <el-col span="24">
+                        <el-button round = "true">注册</el-button>
+                    </el-col>
+                </el-form-item>
+                <el-link type="warning">忘记密码,去重置</el-link>
             </el-form>
+
     </div>
 </template>
 
 <script>
     import { ref } from 'vue'
-    const size = ref('default')
 
     export default {
         name : 'Loader',
-        size
+        props: {
+            size: String
+        },
+        setup(size) {
+            const account = ref('')
+            const password = ref('')
+            return {
+                account : account,
+                password : password,
+                size: size
+            }
+        },
     }
 </script>
 <!-- scoped样式私有化-->
 <style scoped>
     .loader{
-        /*width: 400px;*/
-        /*height: 400px;*/
+        width: 300px;
+        height: 400px;
         background-color: #ffffff;
     }
-    .loader-form{
-        color: #42b983;
+    /*样式覆盖*/
+    /*> =>s 选择父元素的所有子元素*/
+    .el-col > .el-button{
+        width: 100%
     }
 </style>
