@@ -10,14 +10,18 @@
                         type = "password" placeholder="请输入密码" show-password></el-input>
                 </el-form-item>
                 <el-form-item>
-                    <el-col span="24">
-                        <el-button round = "true">登录</el-button>
-                    </el-col>
+                    <el-row>
+                        <el-col>
+                            <el-button :round = "true">登录</el-button>
+                        </el-col>
+                    </el-row>
                 </el-form-item>
                 <el-form-item>
-                    <el-col span="24">
-                        <el-button round = "true">注册</el-button>
-                    </el-col>
+                    <el-row>
+                        <el-col>
+                            <el-button :round = "true">注册</el-button>
+                        </el-col>
+                    </el-row>
                 </el-form-item>
                 <el-link type="warning">忘记密码,去重置</el-link>
             </el-form>

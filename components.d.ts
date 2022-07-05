@@ -12,7 +12,7 @@ declare module '@vue/runtime-core' {
     ElLink: typeof import('element-plus/es')['ElLink']
     ElSpace: typeof import('element-plus/es')['ElSpace']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    Loader: typeof import('./src/components/loader.vue')['default']
+    Loader: typeof import('./src/components/page/load/Loader.vue')['default']
   }
 }
 
