@@ -2,7 +2,7 @@
     <div class = "loader">
             <el-form class = "loader-form" size="default">
                 <el-form-item>
-                    <el-input v-model = "account"  maxlength="10" rows = "4"
+                    <el-input v-model = "userName"  maxlength="10" rows = "4"
                     type = "text" placeholder="请输入账号"></el-input>
                 </el-form-item>
                 <el-form-item>
@@ -38,10 +38,10 @@
             size: String
         },
         setup(size) {
-            const account = ref('')
+            const userName = ref('')
             const password = ref('')
             return {
-                account : account,
+                account : userName,
                 password : password,
                 size: size
             }
